@@ -21,21 +21,20 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Recess Clicky-Game</Title>
         <div className="card-wrapper">
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
-          />
-        ))}
+          {this.state.friends.map(friend => (
+            <FriendCard
+              removeFriend={this.removeFriend}
+              id={friend.id}
+              key={friend.id}
+              image={friend.image}
+            />
+          ))}
         </div>
       </Wrapper>
     );
   }
-  
+
 }
 
 export default App;
