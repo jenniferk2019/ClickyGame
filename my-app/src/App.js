@@ -22,6 +22,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Recess Clicky-Game</Title>
+        <div className="card-wrapper">
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
@@ -30,9 +31,11 @@ class App extends Component {
             image={friend.image}
           />
         ))}
+        </div>
       </Wrapper>
     );
   }
+  
 }
 
 export default App;
