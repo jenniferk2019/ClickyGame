@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
+// import Wrapper from "./components/Wrapper";
 import NavBar from "./components/NavBar";
 import friends from "./friends.json";
 
@@ -18,25 +18,31 @@ class App extends Component {
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
-  render() {
-    return <NavBar />;
-    }
+  // render() {
+  //   return <NavBar />;
+  //   }
 
   render() {
     return (
-      <Wrapper>
-        <div className="card-wrapper">
-          {this.state.friends.map(friend => (
-            <FriendCard
-              removeFriend={this.removeFriend}
-              id={friend.id}
-              key={friend.id}
-              image={friend.image}
-            />
-          ))}
+      <>
+        <NavBar />
+        <div>
+        {/* <Wrapper> */}
+          <div className="card-wrapper">
+            {this.state.friends.map(friend => (
+              <FriendCard
+                removeFriend={this.removeFriend}
+                id={friend.id}
+                key={friend.id}
+                image={friend.image}
+              />
+            ))}
+          </div>
+        {/* </Wrapper> */}
         </div>
-      </Wrapper>
-);
+      </>
+
+    );
   }
 
 }
