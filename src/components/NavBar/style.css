@@ -1,15 +1,29 @@
 #navbar {
     font-family: 'Saira Stencil One', cursive;
+    background: white;
+    padding-left: 11px;
+    padding-right: 11px;
+    width: 229px;
+    margin: 0 auto;
 }
 
 h1 {
     font-family: 'Lacquer', sans-serif;
+    color: black;
+    margin-top: 116px;
+    margin-bottom: 0%;
 }
 
 p {
     font-family: 'Lacquer', sans-serif;
+    color: black;
+    margin-bottom: 0%;
 }
 
 .jumbotron {
-    background-image: linear-gradient(to bottom, yellow, red, grey);
+    background-image: url("/img/schoolbus.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding-left: 22px;
 }
