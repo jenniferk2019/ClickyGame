@@ -14,7 +14,7 @@ html, body, #root {
 }
 
 body {
-  background-image: url("/img/recessbg.webp");
+  background-image: url("/img/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -28,4 +28,5 @@ body {
 
 .card-wrapper {
   width: 580px;
+  margin: 0 auto;
 }
