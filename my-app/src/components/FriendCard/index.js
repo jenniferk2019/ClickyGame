@@ -3,12 +3,10 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    <div className="card">
-      <div className="container">
-        <img src={props.image} />
-      </div>
-    </div>
+  <div className="card img-container hover">
+    <img src={props.image} id={props.id}
+      onClick={() => props.shuffleScoreCard(props.id) } className="shuffleScore" />
+  </div>
   );
 }
-
 export default FriendCard;

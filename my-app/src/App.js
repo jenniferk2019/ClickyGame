@@ -18,8 +18,8 @@ class App extends Component {
   shuffleScoreCard = id => {
     let clickedFriendIds = this.state.clickedFriendIds;
     if(clickedFriendIds.includes(id)) {
-      this.setState ({ clickedFriendIds: [], score: 0, status: "Gave Over!"});
-      return;
+      this.setState ({ clickedFriendIds: [], score: 0, status: "Game Over!"});
+  
     }
 
     else {
@@ -51,7 +51,7 @@ class App extends Component {
           <div className="card-wrapper">
             {this.state.friends.map(friend => (
               <FriendCard
-                removeFriend={this.removeFriend}
+                shuffleScoreCard={this.shuffleScoreCard}
                 id={friend.id}
                 key={friend.id}
                 image={friend.image}
