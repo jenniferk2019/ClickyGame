@@ -4,13 +4,20 @@
 }
 
 html, body, #root {
-  padding: 0;
-  margin: 0;
-  height: 100%;
+  align-content: center;
+  padding-top: auto;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
 }
 
 body {
   background-image: url("/img/recessbg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card {

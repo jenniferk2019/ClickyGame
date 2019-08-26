@@ -1,0 +1,15 @@
+#navbar {
+    font-family: 'Saira Stencil One', cursive;
+}
+
+h1 {
+    font-family: 'Lacquer', sans-serif;
+}
+
+p {
+    font-family: 'Lacquer', sans-serif;
+}
+
+.jumbotron {
+    background-image: linear-gradient(to bottom, yellow, red, grey);
+}

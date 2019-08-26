@@ -1,33 +1,53 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
-// import Wrapper from "./components/Wrapper";
+import Score from "./components/Score";
 import NavBar from "./components/NavBar";
 import friends from "./friends.json";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
+    friends,
+    clickedFriendIds: [],
+    score: 0,
+    goal: 12,
+    status: ""
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
+  
+  shuffleScoreCard = id => {
+    let clickedFriendIds = this.state.clickedFriendIds;
+    if(clickedFriendIds.includes(id)) {
+      this.setState ({ clickedFriendIds: [], score: 0, status: "Gave Over!"});
+      return;
+    }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
-  // render() {
-  //   return <NavBar />;
-  //   }
+    else {
+      clickedFriendIds.push(id)
+      if(clickedFriendIds.length === 12) {
+        this.setState({score: 12, status: "You Won!", clickedFriendIds: []});
+        console.log('You Win');
+        return;
+      }
+
+       this.setState({ friends, clickedFriendIds, score: clickedFriendIds.length, status: " " });
+       for (let i = friends.length - 1; i > 0; i--) {
+         let j = Math.floor(Math.random() * (i + 1));
+         [friends[i], friends[j]] = [friends[j], friends[i]];
+       }
+
+    }
+  }
 
   render() {
     return (
       <>
         <NavBar />
+        <Score total={this.state.score}
+                goal={12}
+                status={this.state.status}
+                />
         <div>
-        {/* <Wrapper> */}
           <div className="card-wrapper">
             {this.state.friends.map(friend => (
               <FriendCard
@@ -38,7 +58,6 @@ class App extends Component {
               />
             ))}
           </div>
-        {/* </Wrapper> */}
         </div>
       </>
 
