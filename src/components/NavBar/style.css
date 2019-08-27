@@ -21,7 +21,7 @@ p {
 }
 
 .jumbotron {
-    background-image: url("/img/schoolbus.jpg");
+    background-image: url("../../img/schoolbus.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;

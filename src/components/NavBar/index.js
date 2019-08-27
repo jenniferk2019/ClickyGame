@@ -4,8 +4,8 @@ import "./style.css";
 function NavBar() {
   return (
     <div className="container">
-      <nav class="navbar navbar-light">
-        <a class="navbar-brand" id="navbar" href="/">RECESS CLICKY GAME</a>
+      <nav className="navbar navbar-light">
+        <a className="navbar-brand" id="navbar" href="/">RECESS CLICKY GAME</a>
       </nav>
       <div className="jumbotron">
         <h1>Play Clicky Game!</h1>
