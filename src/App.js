@@ -3,6 +3,7 @@ import FriendCard from "./components/FriendCard";
 import Score from "./components/Score";
 import NavBar from "./components/NavBar";
 import friends from "./friends.json";
+import "./index.css";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
