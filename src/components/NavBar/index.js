@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
+import img from "./img/schoolbus.jpg"
 
 const styles = {
-  backgroundImage: 'url("/img/schoolbus.jpg")',
+  backgroundImage: `url(${img})`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
   backgroundSize: 'auto',
