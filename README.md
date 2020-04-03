@@ -1,8 +1,6 @@
-Clicky-Game
+This memory-game app utilizes React. 
 
-Create a memory-game with React. 
-
-This assignment will require breaking an application's UI into components, in order to manage the component state, and to respond to user events.
+This app requires breaking an application's UI into components, in order to manage the component state, and to respond to user events.
 
 Author: Jennifer Kwon
 
