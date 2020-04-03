@@ -4,4 +4,4 @@ This app requires breaking an application's UI into components, in order to mana
 
 Author: Jennifer Kwon
 
-https://jenniferk2019.github.io/ClickyGame/
+https://jenniferk2019.github.io/Memory-Click-Game/
